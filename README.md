@@ -53,6 +53,9 @@ NY Times Article Search API: https://developer.nytimes.com/docs/articlesearch-pr
 ### Articles details
 ![Screenshot 8](screenshots/screenshot8.png)
 
+### Mobile view
+![Screenshot 9](screenshots/screenshot9.png)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
