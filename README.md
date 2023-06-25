@@ -25,7 +25,7 @@ NY Times Article Search API: https://developer.nytimes.com/docs/articlesearch-pr
 1. Clone the repository: git clone <repository_url>
 2. Install dependencies: npm install
 3. Set up the server: Configure the local server using the instructions provided in the https://github.com/techiediaries/fake-api-jwt-json-server. Follow the instructions in the repository's README to set up and run the server at http://localhost:8000/.
-4. Obtain an NY Times API Key: Go to the NY Times Developer Portal - https://developer.nytimes.com/. Sign up for an account and create an API key. Copy the API key. Replace the API_KEY constant with your NY Times API key in constant.ts
+4. Obtain an NY Times API Key: Go to the NY Times Developer Portal - https://developer.nytimes.com/. Sign up for an account and create an API key. Copy the API key. Replace the API_KEY constant with your NY Times API key in constants.ts
 5. Start the application: npm start
 6. Open the app in your browser: http://localhost:4200
    
