@@ -11,6 +11,7 @@ export class PageNavigationComponent {
   @Input() hidePaginationNumbers = false;
   @Output() updateCurrentPage = new EventEmitter<number>();
 
+  // Method to generate an array of numbers from 1 to the given number (a)
   getRange(a: number): number[] {
     return Array.from({ length: a }, (_, index) => index + 1);
   }

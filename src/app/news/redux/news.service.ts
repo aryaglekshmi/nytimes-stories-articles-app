@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
-import { API_KEY, NEWS_API, SEARCH_API } from 'src/app/constant';
+import { API_KEY, NEWS_API, SEARCH_API } from 'src/app/constants';
 import {
   INYTimesArticle,
   INYTimesSearchArticleResponse,

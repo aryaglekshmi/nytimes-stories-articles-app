@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
-  presentDate: Date = new Date();
+  presentDate: Date = new Date(); //To display current date in footer
 }

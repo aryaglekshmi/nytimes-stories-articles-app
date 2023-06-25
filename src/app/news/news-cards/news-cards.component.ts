@@ -83,6 +83,7 @@ export class NewsCardsComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
+    // Reset current page and update news list based on active tab
     this.currentPage = 1;
     this.setNewsListBasedOnRoute();
   }
@@ -102,6 +103,7 @@ export class NewsCardsComponent implements OnInit, OnChanges {
             this.isLoading = false;
           });
       } catch (error) {
+        // Handle any error that occurs during the subscription
         console.error('An error occurred:', error);
         this.isLoading = false;
       }
@@ -161,6 +163,8 @@ export class NewsCardsComponent implements OnInit, OnChanges {
   onWindowResize() {
     this.setItemsBasedOnWindowWidth;
   }
+
+  // Adjust items per page based on window size
   setItemsBasedOnWindowWidth() {
     this.windowWidth = window.innerWidth;
     this.itemsPerPage = 6;

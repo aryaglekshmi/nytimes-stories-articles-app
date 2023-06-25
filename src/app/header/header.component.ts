@@ -16,6 +16,8 @@ export class HeaderComponent {
     this.authService.logOut();
   }
 
+  //   Checks if the user is logged in.
+
   get isLoggedIn(): boolean {
     return this.authService.isLoggedIn;
   }

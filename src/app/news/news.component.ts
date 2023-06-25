@@ -16,9 +16,9 @@ export class NewsComponent implements OnInit {
   news$: Observable<INewsState>;
 
   constructor(private store: Store<INewsState>) {
-    this.news$ = this.store.pipe(select(newsSelector));
-    this.store.dispatch(actions.fetchTopScienceNews());
-    this.store.dispatch(actions.fetchTopWorldNews());
+    this.news$ = this.store.pipe(select(newsSelector)); // Selecting the news state from the store
+    this.store.dispatch(actions.fetchTopScienceNews()); // Dispatching an action to fetch top science news
+    this.store.dispatch(actions.fetchTopWorldNews()); // Dispatching an action to fetch top world news
   }
   ngOnInit(): void {
     this.activeTab = 'worldNews';

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { SERVER_URL } from '../constant';
+import { SERVER_URL } from '../constants';
 import { IUser } from '../interfaces';
 import { Router } from '@angular/router';
 

@@ -14,6 +14,7 @@ export class LoginComponent {
   message = '';
   constructor(private authService: AuthService, private router: Router) {}
 
+  //  Handles the form submission for login.
   onSubmit() {
     if (this.authService.isValidEmail(this.userData.email)) {
       this.authService

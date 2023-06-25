@@ -13,6 +13,7 @@ export class NewsDetailsComponent implements OnInit {
   constructor(private newsService: NewsService) {}
 
   ngOnInit() {
+    // Retrieve the selected news from the news service
     this.selectedNews = this.newsService.getSelectedNews();
   }
 }
