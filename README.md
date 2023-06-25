@@ -9,7 +9,7 @@ This is a simple web application that utilizes the NY Times API to display a lis
 ### Categorized Top News: 
 Users can choose between two categories, "World" and "Science," to view a list of top news articles specific to each category.
 ### Article Search: 
-Users can search for articles by entering keywords in the search input. The app provides pagination support for fetching more results as the user navigates through the pages.
+Users can search for articles by entering keywords in the search input. The app provides pagination support for fetching more results as the user navigates through the pages. Stores history of last 5 searched words.
 ### Article Details:
 When clicking on an article, users can view the article details, including its abstract, web URL, snippet, lead paragraph, print section, print page, source, multimedia, headline, byline, publication date, and keywords.
 ### User Authentication: 
@@ -28,6 +28,30 @@ NY Times Article Search API: https://developer.nytimes.com/docs/articlesearch-pr
 4. Obtain an NY Times API Key: Go to the NY Times Developer Portal - https://developer.nytimes.com/. Sign up for an account and create an API key. Copy the API key. Replace the API_KEY constant with your NY Times API key in constant.ts
 5. Start the application: npm start
 6. Open the app in your browser: http://localhost:4200
+   
+### Home Page
+![Screenshot 1](screenshots/screenshot1.png)
+
+### Registration Page
+![Screenshot 2](screenshots/screenshot2.png)
+
+### Login Page
+![Screenshot 3](screenshots/screenshot3.png)
+
+### Dashboard Page
+![Screenshot 4](screenshots/screenshot4.png)
+
+### News list Page
+![Screenshot 5](screenshots/screenshot5.png)
+
+### Articles based on search list Page
+![Screenshot 6](screenshots/screenshot6.png)
+
+### News details Page
+![Screenshot 7](screenshots/screenshot7.png)
+
+### Articles details
+![Screenshot 8](screenshots/screenshot8.png)
 
 ## Development server
 
