@@ -1,0 +1,15 @@
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="warningModalLabel" aria-hidden="true">
+  <div class="modal-dialog  alert-warning " role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="warningModalLabel">Warning</h5>
+      </div>
+      <div class="modal-body">
+        <p>{{message}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button btn" (click)="closeModal.emit()" class="close-button" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,76 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "variables.scss";
+@import "mixins.scss";
+
+
 /* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  @include font14;
+  font-weight: 600;
+  display: block;
+  @include padding(0, 0, 0, 0);
+  @include margin(0, 0, 0, 0);
+  height: 100vh;
+  width: 100%;
+  background-color: red;
+
+
+  button,
+  .btn {
+    @include button-styles($bg-color, $white);
+
+    &.btn-primary,
+    button[type=submit] {
+      @include button-styles($bg-color, $white);
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    border-radius: 4px;
+    width: 100%;
+    height: 44px;
+    line-height: 2.375em;
+    @include font14;
+    border: 0.0625em solid rgb(18, 18, 18);
+    border-radius: 3px;
+    transition: all 0.15s ease-in 0s;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .w-80 {
+    width: 80%;
+  }
+
+  .search-container {
+    .news-list-container {
+      height: calc(100% - 150px);
+      justify-content: center;
+    }
+  }
+}
+
+
+.mobile-hidden,
+.mobile-hidden.d-flex {
+  @media(max-width:1024px) {
+    display: none !important;
+  }
+}

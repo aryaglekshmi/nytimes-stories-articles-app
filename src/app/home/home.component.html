@@ -1,0 +1,18 @@
+<section class="home-container row w-100">
+  <ng-container *ngIf="showSelectCards; else authorizeUseComp">
+    <app-user-select-cards></app-user-select-cards>
+  </ng-container>
+  <ng-template #authorizeUseComp>
+    <div class="h-100 img-container p-0">
+      <img src="../../assets/newspaper.jpg" alt="">
+    </div>
+    <div class="h-100 d-flex flex-column justify-content-center align-items-center position-absolute">
+      <div class="mb-5">
+        <h2 class="text-center">
+          Create your free account or log in </h2>
+      </div>
+      <a class="btn btn-sm btn-outline-secondary mb-4" href="register">Register</a>
+      <a class="btn btn-sm btn-outline-secondary ml-2 mb-4" href="login">Login</a>
+    </div>
+  </ng-template>
+</section>

@@ -1,0 +1,10 @@
+ <div class="news-container">
+   <nav class="nav nav-pills nav-fill">
+     <a class="nav-item nav-link active fw-bold" [ngClass]="{'active': activeTab === 'worldNews'}"
+       (click)="activeTab='worldNews'">World </a>
+     <a class="nav-item nav-link fw-bold" [ngClass]="{'active': activeTab === 'scienceNews'}"
+       (click)="activeTab='scienceNews'">Science</a>
+   </nav>
+   <app-loader *ngIf="showLoading"></app-loader>
+   <app-news-cards *ngIf="!showLoading" [activeTab]="activeTab" [isArticleSearch]="false"></app-news-cards>
+ </div>

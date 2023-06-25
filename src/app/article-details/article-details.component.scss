@@ -1,0 +1,123 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+
+.news-details-wrapper {
+  width: 100%;
+  height: calc(100% - 120px);
+  background: $white;
+  padding: 20px;
+
+  .stretch-card {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+
+    .img-fluid {
+      height: 100%;
+      opacity: 0.4;
+      background-color: $bg-form;
+      object-fit: cover;
+      object-position: bottom;
+    }
+  }
+
+  .card-title {
+    @include font14;
+  }
+
+  .card-text {
+    .badge-dark {
+      background-color: $black;
+      color: $white;
+      margin: 5px;
+
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .card-body {
+    max-height: 40%;
+    overflow: hidden;
+  }
+
+  .left-card,
+  .right-card {
+    height: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: none;
+    padding: 0;
+    width: 49%;
+
+    @media (max-width:1024px) {
+      height: 48%;
+    }
+
+    .card {
+      border: none;
+    }
+
+    &.col-xl-6 {
+      width: 49%;
+
+      @media (max-width:1024px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .right-card {
+    margin-left: 15px;
+
+    @media (max-width:1024px) {
+      padding-top: 10px;
+      margin-left: 0;
+    }
+  }
+
+  .fs-10 {
+    font-size: 10px;
+  }
+
+  .banner-content {
+    position: absolute;
+    padding: 40px 60px;
+    left: 0px;
+    top: 0px;
+    color: $black;
+    font-weight: 700;
+    width: 100%;
+
+    .badge {
+      color: $black;
+      width: 100%;
+      white-space: break-spaces;
+    }
+
+    @media (max-width:1024px) {
+      padding: 10px;
+      font-size: 12px;
+
+      h5 {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .btn {
+    color: $white;
+    max-width: 200px;
+
+    @media (max-width:1024px) {
+      max-width: 140px;
+      height: auto;
+    }
+  }
+
+  .h-60 {
+    height: 60%;
+  }
+
+}

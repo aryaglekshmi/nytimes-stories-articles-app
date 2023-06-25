@@ -1,0 +1,35 @@
+<div class="modal search-modal" role="dialog">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>Search Article</h1>
+        <button type="button" class="btn-close" (click)="closeSearchModal()">
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="search-outer w-100">
+          <div class="d-flex w-100 align-items-center">
+            <img class="search-icon" alt="" src="../../assets/search.png">
+            <input class="search search-box" type="text" placeholder="Search" maxlength="120" [(ngModel)]="searchText"
+              (keyup.enter)="searchArticle()">
+            <a id="clearSearch" (click)="closeSearchModal()">
+              <img class="search-icon Close" alt="close" src="../../assets/close.png">
+            </a>
+            <a id="searchButton">
+              <img class="search-icon me-0" alt="search" src="../../assets/arrow.png" (click)="searchArticle()">
+            </a>
+          </div>
+        </div>
+        <ul id="searchResult">
+        </ul>
+        <span class="text-white text-regular" *ngIf="getSearchHistory.length>0">Recent Search:
+          <span id="recentSearch" *ngFor="let history of getSearchHistory; let i = index; trackBy: trackByFn">
+            <a (click)="searchArticle(history)"><span class="historySearch">{{history}} </span>
+              {{i}}
+              <span *ngIf="i!==getSearchHistory.length-1"> , </span></a>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

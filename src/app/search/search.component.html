@@ -1,0 +1,30 @@
+<div class="search-container">
+  <section class="p-4">
+    <div class="row align-items-end">
+      <div class="col-md-6 text-end">
+        <h5>Search for Articles </h5>
+      </div>
+      <div class="col-md-6">
+        <div class="md-form mt-0 position-relative d-flex align-items-center justify-content-end wZ-80">
+          <img class="search-icon" alt="search-icon" src="../../assets/search.png">
+          <input class="form-control search-input" type="text" placeholder="Search" aria-label="Search" axlength="120"
+            [(ngModel)]="searchText" (keyup.enter)="searchArticles(searchText)">
+        </div>
+      </div>
+    </div>
+    <div class="d-flex p-3 recent-history">
+      <div class="col-md-6 text-end">
+        <small>Recent search history: </small>
+      </div>
+      <div class="col-md-6 pl-3 historySearch-section">
+        <span *ngFor="let history of getSearchHistory; let i = index; trackBy: trackByFn">
+          <a (click)="searchArticles(history)">
+            <a class="historySearch" [ngClass]="{'active':isSelectedSearchText(history)}">{{history}} </a>
+            <span *ngIf="i!==getSearchHistory.length-1"> , </span></a>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <app-news-cards [isArticleSearch]="true" #cardsToDisplayArticles></app-news-cards>
+</div>

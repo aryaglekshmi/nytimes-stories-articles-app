@@ -1,0 +1,201 @@
+@mixin button-styles($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 44px;
+  line-height: 2.375em;
+  font-size: 1em;
+  font-weight: 700;
+  border: 0.0625em solid rgb(18, 18, 18);
+  border-radius: 3px;
+  transition: all 0.15s ease-in 0s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+
+@mixin padding($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+// sm: 540px,
+// md: 720px,
+// lg: 960px,
+// xl: 1140px,
+// xxl: 1320px,
+// xxxl: 1600px  - Screen size
+
+// fontsize responsive mixin
+@mixin fontSize($xxxl, $xxl, $xl, $lg, $md, $sm, $xs, $tiny) {
+  font-size: #{$xxxl}px;
+
+  @media(max-width:1920px) {
+    font-size:calc(#{$xxl}px + (#{$xxxl} - #{$xxl}) * ((100vw - 1600px) / (1920 - 1600)));
+  }
+
+  @media (max-width:1600px) {
+    font-size: calc(#{$xl}px + (#{$xxl} - #{$xl}) * ((100vw - 1440px) / (1600 - 1440)));
+  }
+
+  @media (max-width:1440px) {
+    font-size: calc(#{$lg}px + (#{$xl} - #{$lg}) * ((100vw - 1280px) / (1440 - 1280)));
+  }
+
+  @media (max-width:1280px) {
+    font-size: calc(#{$md}px + (#{$lg} - #{$md}) * ((100vw - 1024px) / (1280 - 1024)));
+  }
+
+  @media(max-width:1024px) {
+    font-size: calc(#{$sm}px + (#{$md} - #{$sm}) * ((100vw - 768px) / (1024 - 768)));
+  }
+
+  @media(max-width:768px) {
+    font-size: calc(#{$xs}px + (#{$sm} - #{$xs}) * ((100vw - 480px) / (768 - 480)));
+  }
+
+  @media(max-width:480px) {
+    line-height: calc(#{$tiny}px + (#{$xs} - #{$tiny}) * ((100vw - 320px) / (480 - 320)));
+  }
+}
+
+// line height responsive mixin
+@mixin lineHeight($xxxl, $xxl, $xl, $lg, $md, $sm, $xs, $tiny) {
+  line-height: #{$xxxl}px;
+
+  @media(max-width:1920px) {
+    line-height:calc(#{$xxl}px + (#{$xxxl} - #{$xxl}) * ((100vw - 1600px) / (1920 - 1600)));
+  }
+
+  @media (max-width:1600px) {
+    line-height: calc(#{$xl}px + (#{$xxl} - #{$xl}) * ((100vw - 1440px) / (1600 - 1440)));
+  }
+
+  @media (max-width:1440px) {
+    line-height: calc(#{$lg}px + (#{$xl} - #{$lg}) * ((100vw - 1280px) / (1440 - 1280)));
+  }
+
+  @media (max-width:1280px) {
+    line-height: calc(#{$md}px + (#{$lg} - #{$md}) * ((100vw - 1024px) / (1280 - 1024)));
+  }
+
+  @media(max-width:1024px) {
+    line-height: calc(#{$sm}px + (#{$md} - #{$sm}) * ((100vw - 768px) / (1024 - 768)));
+  }
+
+  @media(max-width:768px) {
+    line-height: calc(#{$xs}px + (#{$sm} - #{$xs}) * ((100vw - 480px) / (768 - 480)));
+  }
+
+  @media(max-width:480px) {
+    line-height: calc(#{$tiny}px + (#{$xs} - #{$tiny}) * ((100vw - 320px) / (480 - 320)));
+  }
+}
+
+@mixin font24() {
+  @include fontSize(24, 24, 24, 18, 18, 14, 14, 14);
+  @include lineHeight(28, 28, 28, 22, 22, 18, 18, 18);
+}
+
+@mixin font20() {
+  @include fontSize(20, 20, 20, 18, 18, 18, 18, 18);
+  @include lineHeight(24, 24, 24, 22, 22, 22, 22, 22);
+}
+
+@mixin font14() {
+  @include fontSize(14, 14, 14, 14, 12, 12, 12, 12);
+  @include lineHeight(18, 18, 18, 18, 16, 16, 16, 16);
+}
+
+@mixin paddingX($xxxl, $xxl, $xl, $lg, $md, $sm, $xs, $tiny) {
+  padding-left : #{$xxxl}px;
+  padding-right: #{$xxxl}px;
+
+  @media(max-width:1920px) {
+    padding-left : calc(#{$xxl}px + (#{$xxxl} - #{$xxl}) * ((100vw - 1600px) / (1920 - 1600)));
+    padding-right: calc(#{$xxl}px + (#{$xxxl} - #{$xxl}) * ((100vw - 1600px) / (1920 - 1600)));
+  }
+
+  @media (max-width:1600px) {
+    padding-left : calc(#{$xl}px + (#{$xxl} - #{$xl}) * ((100vw - 1440px) / (1600 - 1440)));
+    padding-right: calc(#{$xl}px + (#{$xxl} - #{$xl}) * ((100vw - 1440px) / (1600 - 1440)));
+  }
+
+  @media (max-width:1440px) {
+    padding-left : calc(#{$lg}px + (#{$xl} - #{$lg}) * ((100vw - 1280px) / (1440 - 1280)));
+    padding-right: calc(#{$lg}px + (#{$xl} - #{$lg}) * ((100vw - 1280px) / (1440 - 1280)));
+  }
+
+  @media (max-width:1280px) {
+    padding-left : calc(#{$md}px + (#{$lg} - #{$md}) * ((100vw - 1024px) / (1280 - 1024)));
+    padding-right: calc(#{$md}px + (#{$lg} - #{$md}) * ((100vw - 1024px) / (1280 - 1024)));
+  }
+
+  @media(max-width:1024px) {
+    padding-left : calc(#{$sm}px + (#{$md} - #{$sm}) * ((100vw - 768px) / (1024 - 768)));
+    padding-right: calc(#{$sm}px + (#{$md} - #{$sm}) * ((100vw - 768px) / (1024 - 768)));
+  }
+
+  @media(max-width:768px) {
+    padding-left : calc(#{$xs}px + (#{$sm} - #{$xs}) * ((100vw - 480px) / (768 - 480)));
+    padding-right: calc(#{$xs}px + (#{$sm} - #{$xs}) * ((100vw - 480px) / (768 - 480)));
+  }
+
+  @media(max-width:480px) {
+    padding-left : calc(#{$tiny}px + (#{$xs} - #{$tiny}) * ((100vw - 320px) / (480 - 320)));
+    padding-right: calc(#{$tiny}px + (#{$xs} - #{$tiny}) * ((100vw - 320px) / (480 - 320)));
+  }
+}
+
+@mixin paddingY($xxxl, $xxl, $xl, $lg, $md, $sm, $xs, $tiny) {
+  padding-top : #{$xxxl}px;
+  padding-bottom: #{$xxxl}px;
+
+  @media(max-width:1920px) {
+    padding-top : calc(#{$xxl}px + (#{$xxxl} - #{$xxl}) * ((100vw - 1600px) / (1920 - 1600)));
+    padding-bottom: calc(#{$xxl}px + (#{$xxxl} - #{$xxl}) * ((100vw - 1600px) / (1920 - 1600)));
+  }
+
+  @media (max-width:1600px) {
+    padding-top : calc(#{$xl}px + (#{$xxl} - #{$xl}) * ((100vw - 1440px) / (1600 - 1440)));
+    padding-bottom: calc(#{$xl}px + (#{$xxl} - #{$xl}) * ((100vw - 1440px) / (1600 - 1440)));
+  }
+
+  @media (max-width:1440px) {
+    padding-top : calc(#{$lg}px + (#{$xl} - #{$lg}) * ((100vw - 1280px) / (1440 - 1280)));
+    padding-bottom: calc(#{$lg}px + (#{$xl} - #{$lg}) * ((100vw - 1280px) / (1440 - 1280)));
+  }
+
+  @media (max-width:1280px) {
+    padding-top : calc(#{$md}px + (#{$lg} - #{$md}) * ((100vw - 1024px) / (1280 - 1024)));
+    padding-bottom: calc(#{$md}px + (#{$lg} - #{$md}) * ((100vw - 1024px) / (1280 - 1024)));
+  }
+
+  @media(max-width:1024px) {
+    padding-top : calc(#{$sm}px + (#{$md} - #{$sm}) * ((100vw - 768px) / (1024 - 768)));
+    padding-bottom: calc(#{$sm}px + (#{$md} - #{$sm}) * ((100vw - 768px) / (1024 - 768)));
+  }
+
+  @media(max-width:768px) {
+    padding-top : calc(#{$xs}px + (#{$sm} - #{$xs}) * ((100vw - 480px) / (768 - 480)));
+    padding-bottom: calc(#{$xs}px + (#{$sm} - #{$xs}) * ((100vw - 480px) / (768 - 480)));
+  }
+
+  @media(max-width:480px) {
+    padding-top : calc(#{$tiny}px + (#{$xs} - #{$tiny}) * ((100vw - 320px) / (480 - 320)));
+    padding-bottom: calc(#{$tiny}px + (#{$xs} - #{$tiny}) * ((100vw - 320px) / (480 - 320)));
+  }
+}

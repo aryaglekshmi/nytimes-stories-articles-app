@@ -1,0 +1,49 @@
+@import "../../../variables.scss";
+@import "../../../mixins.scss";
+
+
+.news-list-container {
+  height: calc(100% - 60px);
+  justify-content: space-between;
+
+  .row {
+    height: calc(100% - 50px);
+    margin-bottom: 10px;
+
+    .col-md-4 {
+      height: 50%;
+      padding-bottom: 20px;
+
+      .card {
+        background-color: $bg-form;
+        border: none;
+        height: 100%;
+        cursor: pointer;
+
+        .card-img-top {
+          object-position: top;
+          object-fit: cover;
+          opacity: 0.5;
+        }
+
+        .card-body {
+          position: absolute;
+          color: $white;
+          background-color: rgba(0, 0, 0, 0.5);
+          overflow: hidden;
+          @include font14;
+
+          .card-title {
+            @include font14;
+          }
+        }
+
+      }
+
+    }
+  }
+
+  .pagination-comp {
+    height: 50px;
+  }
+}
