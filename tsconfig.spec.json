@@ -10,5 +10,11 @@
   "include": [
     "src/**/*.spec.ts",
     "src/**/*.d.ts"
-  ]
+  ],
+    "files": [
+    "src/app/article-details/article-details.component.spec.ts",
+    "src/app/authorization/auth.service.spec.ts",
+    "src/app/footer/footer.component.spec.ts",
+    "src/app/news/news-details/news-details.component.spec.ts"
+  ],
 }

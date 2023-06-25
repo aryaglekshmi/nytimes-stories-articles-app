@@ -27,7 +27,7 @@ export class RegistrationComponent {
               this.router.navigate(['/dashboard']);
             } else {
               this.showPopup = true;
-              this.message = 'Register failed! ';
+              this.message = 'Registeration failed! ';
             }
           })
           .catch((error) => {

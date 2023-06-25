@@ -1,21 +1,29 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { FooterComponent } from './footer.component';
 
 describe('FooterComponent', () => {
   let component: FooterComponent;
   let fixture: ComponentFixture<FooterComponent>;
 
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [FooterComponent],
+    }).compileComponents();
+  });
+
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [FooterComponent]
-    });
     fixture = TestBed.createComponent(FooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create the footer component', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should display the current date in the footer', () => {
+    const footerElement: HTMLElement = fixture.nativeElement;
+    const currentDateElement = footerElement.querySelector('.current-date');
+    expect(currentDateElement).toBeTruthy();
   });
 });

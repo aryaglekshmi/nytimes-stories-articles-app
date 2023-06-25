@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ArticleDetailsComponent } from './article-details.component';
 import { INYTimesArticle } from '../news/news.interface';
 import { NewsService } from '../news/redux/news.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('ArticleDetailsComponent', () => {
   let component: ArticleDetailsComponent;
@@ -12,6 +13,7 @@ describe('ArticleDetailsComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ArticleDetailsComponent],
       providers: [NewsService],
+      imports: [HttpClientTestingModule],
     }).compileComponents();
   });
 
