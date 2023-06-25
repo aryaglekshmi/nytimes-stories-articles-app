@@ -14,6 +14,7 @@ Users can search for articles by entering keywords in the search input. The app 
 When clicking on an article, users can view the article details, including its abstract, web URL, snippet, lead paragraph, print section, print page, source, multimedia, headline, byline, publication date, and keywords.
 ### User Authentication: 
 The app includes user registration and login screens that are integrated with a local server. The server can be accessed at http://localhost:8000/. User authentication is handled using JSON Web Tokens (JWT), and the token received during the login process is passed through to NY Times API requests in the Authorization JWT Bearer token header.
+If you encounter any registration or login issues,please restart the server.
 ### Token Refresh:
 A middleware is implemented to automatically refresh the token after 15 minutes or whenever it expires, ensuring a seamless user experience.
 
