@@ -61,7 +61,7 @@ export class AuthService {
     sessionStorage.clear();
     this.router.navigate(['/home']);
   }
-
+  // using /login since there is no such /refresh to get token after expiry date
   refreshToken(): Promise<void> {
     return new Promise<void>(() => {
       try {

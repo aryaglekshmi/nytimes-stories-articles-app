@@ -25,6 +25,7 @@ export class ApiInterceptorInterceptor implements HttpInterceptor {
     if (this.authService.isTokenExpiredOrExpiresSoon()) {
       // If the token is expired or expires soon, refresh it and add the new token to the request headers.
       return from(this.authService.refreshToken()).pipe(
+        //return from(...) is used to convert a promise or another iterable object into an Observable
         mergeMap(() => {
           const accessToken = this.authService.getAccessToken();
           return this.handleRequestWithToken(request, next, accessToken);

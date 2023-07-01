@@ -42,7 +42,3 @@ export const newsReducer = createReducer(
     error: error,
   }))
 );
-
-export function reducer(state: INewsState | undefined, action: Action) {
-  return newsReducer(state, action);
-}

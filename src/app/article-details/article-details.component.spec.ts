@@ -6,10 +6,11 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('ArticleDetailsComponent', () => {
   let component: ArticleDetailsComponent;
-  let fixture: ComponentFixture<ArticleDetailsComponent>;
+  let fixture: ComponentFixture<ArticleDetailsComponent>; //It represents a wrapper around the component being tested and provides methods to interact with and observe the component's behavior.
   let newsService: NewsService;
 
   beforeEach(async () => {
+    //describe function is a Jasmine function used to group related test cases or specifications
     await TestBed.configureTestingModule({
       declarations: [ArticleDetailsComponent],
       providers: [NewsService],
@@ -18,12 +19,14 @@ describe('ArticleDetailsComponent', () => {
   });
 
   beforeEach(() => {
+    //Jasmine function that runs a given callback function before each it block or test case in a describe block.
     fixture = TestBed.createComponent(ArticleDetailsComponent);
     component = fixture.componentInstance;
     newsService = TestBed.inject(NewsService);
   });
 
   it('should create the component', () => {
+    // Jasmine function used to define an individual test case or specification.
     expect(component).toBeTruthy();
   });
 
@@ -58,7 +61,7 @@ describe('ArticleDetailsComponent', () => {
         },
       ],
     };
-    spyOn(newsService, 'getSelectedArticle').and.returnValue(mockArticle);
+    spyOn(newsService, 'getSelectedArticle').and.returnValue(mockArticle); // Spies are a powerful testing feature that allow you to "spy" on functions or methods and track their usage,
 
     fixture.detectChanges();
 

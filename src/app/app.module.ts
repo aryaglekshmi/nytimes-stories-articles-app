@@ -18,6 +18,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { UserSelectCardsComponent } from './user-select-cards/user-select-cards.component';
 import { NewsDetailsComponent } from './news/news-details/news-details.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
       useClass: ApiInterceptorInterceptor,
       multi: true,
     },
+    DatePipe,
   ],
   bootstrap: [AppComponent],
 })
