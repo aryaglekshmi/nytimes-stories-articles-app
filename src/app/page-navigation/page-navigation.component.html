@@ -12,7 +12,8 @@
           </li>
         </ng-container>
         <ng-template #mobilePagination>
-          <li class="page-item" *ngFor="let number of [currentPage - 1, currentPage, currentPage + 1]">
+          <li class="page-item" *ngFor="let number of [currentPage - 1, currentPage, currentPage + 1]"
+            [ngClass]="{'active': currentPage === number}">
             <a class="page-link" (click)="selectPage(number)"
               *ngIf="number >= 1 && number <= totalPages">{{ number }}</a>
           </li>
